@@ -1,5 +1,7 @@
 # dsh-coding-box
 
+> 版本 0.2.0 · MIT License
+
 给 vibe coding 用的 DeepSeek Harness 工具箱：一个侧边栏入口、一个总览页，每个工具独立一页。
 
 - 侧边栏图标（排在 Plugins、Schedules 之后）打开主面板
@@ -108,17 +110,7 @@ HTTP API（同源，仅本机）：`GET /dsh-coding-box/api/state`，`POST /dsh-
 
 Host 用 `ctx.inject(['tools' | 'systemPrompt' | 'webServer'], child => child.effect(...))` 等服务就绪后再注册，避免应用冷启动时插件早于服务创建、fiber 显示 active 但什么都没挂上。
 
-## 验证记录（2026-11-08）
-
-- 安装：`install_bundle D:\workspace\dsh-coding-box` → `application: applied`
-- 客户端：`main` 槽 key `dsh-coding-box`，`sidebar.panellist` id `dsh-coding-box`（order 20），`settings.section` 不含它
-- Codegraph：识别出两个项目（均已索引），当前工作区标注正确；`initProject` 重跑后 6 文件 / 151 节点；非法路径添加会返回错误；`codegraph_status` 在未传 `projectPath` 时按调用会话解析到 `D:\workspace\dsh-coding-box`
-- MCP：用 `tools/mock-mcp-server.mjs` 走通端到端 —— 添加 → `connected` → 发现 `echo` 工具 → 移除后服务器与工具都消失
-- Skills：新建 → 会话目录立即出现；关闭模型可用 → 立即消失；删除 → 进回收站
-
-未验证：面板与各页的实际渲染（本会话没有浏览器控制能力，无法截图/看 DOM）；客户端改动后需要刷新一次页面。
-
-已知限制：
+## 已知限制
 
 - `/dsh-coding-box/api/*` 没有额外鉴权，仅依赖 DSH Web 服务只监听本机
 - Codegraph 安装/索引是同步 HTTP 请求，大仓库首次索引会等较久
@@ -127,3 +119,8 @@ Host 用 `ctx.inject(['tools' | 'systemPrompt' | 'webServer'], child => child.ef
 ## 卸载
 
 `plugin_manager remove_bundle dsh-coding-box`，然后按需删除 `~/.dsh/dsh-coding-box`（含 codegraph 安装、回收站、MCP 定义）和项目里的 `.codegraph/`。
+
+## License
+
+[MIT](LICENSE)
+

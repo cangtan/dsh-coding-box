@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "type": "module",
+  "license": "MIT",
   "description": "dsh-coding-box: a vibe-coding toolbox for DeepSeek Harness — one switchboard for Codegraph and skills.",
   "exports": {
     ".": "./index.js",
