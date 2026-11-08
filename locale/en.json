@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "dsh-coding-box",
+    "description": "Vibe-coding toolbox: turn Codegraph on and off, auto-install it, and manage local skills."
+  },
+  "nav": { "title": "dsh-coding-box" },
+  "page": {
+    "subtitle": "Vibe-coding toolbox: switch the tools on or off, then let the agent use them.",
+    "refresh": "Refresh",
+    "loading": "Loading…",
+    "failed": "Could not read the toolbox state.",
+    "modules": "Modules",
+    "codegraph": {
+      "title": "Codegraph",
+      "description": "Semantic code graph for agents: search symbols, follow call paths, and measure the impact of a change.",
+      "enabled": "On",
+      "disabled": "Off",
+      "notInstalled": "Not installed",
+      "installed": "Installed",
+      "install": "Install",
+      "installing": "Installing…",
+      "upgrade": "Upgrade",
+      "reindex": "Index project",
+      "sync": "Sync",
+      "indexing": "Working…",
+      "project": "Project",
+      "notIndexed": "No index in this project yet",
+      "autoInstall": "Install automatically when switched on",
+      "projectPath": "Project path",
+      "projectPathHint": "Leave empty to follow the active workspace.",
+      "toolsHint": "Adds codegraph_explore, codegraph_query, codegraph_node, codegraph_impact and codegraph_status for the agent."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "Discover, enable, create and remove local skills from the project and user roots.",
+      "empty": "No skills found on disk yet.",
+      "count": "{count} skills",
+      "source": "Source",
+      "modelInvocable": "Model can use it",
+      "userInvocable": "User can invoke it",
+      "new": "New skill",
+      "name": "Name",
+      "skillDescription": "Description",
+      "body": "Instructions",
+      "create": "Create",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "open": "Open",
+      "root": "Save under",
+      "rootProject": "Project",
+      "rootUser": "User",
+      "invalidName": "Use kebab-case: lowercase letters, digits and single dashes.",
+      "deleteConfirm": "Delete this skill? It moves to the dsh-coding-box trash folder.",
+      "toolsHint": "Adds the skill_manage tool so the agent can list, create and retire skills."
+    },
+    "toast": {
+      "saved": "Saved",
+      "installed": "Codegraph installed",
+      "upgraded": "Codegraph upgraded",
+      "indexed": "Index updated",
+      "deleted": "Skill deleted",
+      "created": "Skill created"
+    }
+  }
+}

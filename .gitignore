@@ -1,0 +1,19 @@
+# Codegraph index (machine-specific, rebuild with `codegraph init`)
+.codegraph/
+.codegraph-*/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local artifacts
+*.log
+*.tmp

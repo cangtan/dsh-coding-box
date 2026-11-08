@@ -1,0 +1,11 @@
+- insert:
+    - id: dsh-coding-box
+      name: dsh-coding-box
+      config:
+        codegraph:
+          enabled: false
+          autoInstall: true
+          packageName: '@colbymchenry/codegraph'
+        skills:
+          enabled: true
+          extraRoots: []
